@@ -1,6 +1,13 @@
 require "johncoryk_palindrome/version"
 
-module JohncorykPalindrome
-  class Error < StandardError; end
-  # Your code goes here...
+class String  
+  def palindrome?
+      processed_content == processed_content.reverse
+  end
+
+  private
+      # Processes the string for palindrome testing.
+      def processed_content
+          self.scan(/[a-z]/i).join.downcase
+      end
 end
