@@ -16,4 +16,12 @@ class JohncorykPalindromeTest < Minitest::Test
   def test_palindrom_with_puncuation
     assert "Madam, I'm Adam.".palindrome?    
   end
+
+  def test_integer_non_palindrome
+    refute 123.palindrome?
+  end
+
+  def test_integer_palindrome
+    assert 12321.palindrome?
+  end
 end
