@@ -8,6 +8,6 @@ class String
   private
       # Processes the string for palindrome testing.
       def processed_content
-          self.scan(/[a-z]/i).join.downcase
+          scan(/[a-z]/i).join.downcase
       end
 end
